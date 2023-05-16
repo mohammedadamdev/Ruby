@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   post "sign_up", to: "registration#create"
 
+  delete "logout", to: "session#destroy"
+
   # get "/", to: "main#index" #Method one
   root to: "main#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
