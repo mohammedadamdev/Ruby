@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   post "sign_up", to: "registration#create"
 
-  delete "logout", to: "session#destroy"
+  get "sign_in", to: "sessions#new"
+
+  post "sign_in", to: "sessions#create"
+
+  delete "logout", to: "sessions#destroy"
 
   # get "/", to: "main#index" #Method one
   root to: "main#index"
